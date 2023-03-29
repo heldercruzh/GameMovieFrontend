@@ -1,0 +1,22 @@
+
+.ranking-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.user-not-found {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.group-user {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.user-ranking {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,41 @@
+.container-root {  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+    width: 80%;
+    max-width: 1280px;   
+    margin: auto;    
+    font-size: 10px;   
+}
+
+.container-header { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;        
+    background-color: #add8e6;
+    margin-top: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.container-menu {   
+    display: flex;
+    justify-content: center;
+    flex-direction: row;  
+    background-color: #f8f8f8;
+}
+
+.container-body { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+    background-color: #a6dced;
+    border-radius: 0px 0px 10px 10px;
+}

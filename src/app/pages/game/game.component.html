@@ -1,0 +1,54 @@
+<div class="game-body">
+    <div *ngIf="!game">
+        <span>Unable to open a new game.</span>
+    </div>
+    <div *ngIf="!!game">
+        <div class="top-game">
+            <div>
+                <button mat-stroked-button (click)="stopGame()" >Stop game</button>
+            </div>
+            <div *ngIf="answerDtoModel" class="score-game">
+                <div>
+                    <span>Score Game: </span>
+                    <span>{{answerDtoModel.scoreGame}}</span>
+                </div>
+                <div>
+                    <span>Score User: </span>
+                    <span>{{answerDtoModel.scoreUser}}</span>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!question">
+            <span>There are no more questions available.</span>
+        </div>
+        <div *ngIf="!!question">
+            <div class="card-game">               
+                <mat-card class="card">
+                   <form [formGroup]="questionForm" (ngSubmit)="onSubmit()" class="form"> 
+                     
+                        <div class="titulo-card-game">
+                            <h2>Choose the most rated movies or series on IMDb</h2>
+                        </div>
+                        <mat-radio-group formControlName="id">
+                          <div> 
+                            <div>                            
+                                <mat-radio-button class="form-radio-button" [value]="question.firstMovie.id" >
+                                    <span>{{question.firstMovie.name}}</span>
+                                </mat-radio-button>
+                            </div>
+                            <div>
+                                <mat-radio-button class="form-radio-button" [value]="question.secondMovie.id">
+                                    <span>{{question.secondMovie.name}}</span>
+                                </mat-radio-button>
+                            </div>
+                           </div>
+                        </mat-radio-group>
+                     
+                      <button mat-stroked-button type="submit" [disabled]="!questionForm.valid">Anwser</button>                
+                   </form>
+                </mat-card>
+            </div>
+           
+        </div>
+    </div>
+</div>

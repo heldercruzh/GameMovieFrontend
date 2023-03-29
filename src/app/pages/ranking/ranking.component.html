@@ -1,0 +1,21 @@
+<div class="ranking-body">
+    <div *ngIf="!users" class="user-not-found">
+        <span>No user registered yet.</span>
+    </div>
+    <div *ngIf="!!users" class="group-user">
+        <div *ngFor="let user of users">
+            <div class="user-ranking">
+                <span>{{user.posicao}}</span>
+                <span>º </span>
+                <span>{{user.name}}</span>
+                <span> (</span>
+                <span>{{user.score}}</span>
+                <span> pontos).</span>  
+                <mat-divider></mat-divider>              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

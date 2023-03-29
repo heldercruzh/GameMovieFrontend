@@ -1,0 +1,22 @@
+<div class="login-body">
+    <div class="login-form">
+        <div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+                <mat-form-field class="input-form">
+                <mat-label>E-mail</mat-label>
+                <input matInput formControlName="email">
+                </mat-form-field>
+                <mat-form-field class="input-form">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password">
+                </mat-form-field>
+                <button mat-stroked-button type="submit" [disabled]="!loginForm.valid">Login</button>
+            </form> 
+        </div>
+        <div class="form-second-button">
+            <a [routerLink]="['/user-register']">
+                <span>I have no record.</span>
+            </a>
+        </div>
+    </div>
+</div>

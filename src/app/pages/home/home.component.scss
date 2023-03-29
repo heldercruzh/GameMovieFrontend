@@ -1,0 +1,15 @@
+.home-body {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
